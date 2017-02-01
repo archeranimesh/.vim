@@ -4,6 +4,10 @@ call pathogen#helptags()
 syntax on
 filetype plugin indent on
 
+" https://gist.github.com/rocarvaj/2513367
+" disable vi compatibility (emulation of old bugs)
+set nocompatible
+
 "NERDTree plugin configuration.
 "open a NERDTree automatically when vim starts up
 autocmd vimenter * NERDTree
