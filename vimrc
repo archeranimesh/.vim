@@ -34,3 +34,17 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 " End of nerdTree Configuration
+
+" Tab Settings
+" http://stackoverflow.com/questions/234564/tab-key-4-spaces-and-auto-indent-after-curly-braces-in-vim
+set tabstop=4 		" show existing tab with 4 spaces width
+set shiftwidth=4 	" when indenting with '>', use 4 spaces width
+set expandtab 		" On pressing tab, insert 4 spaces
+set softtabstop=4   	" Sets the number of columns for a TAB."
+" Only do this part when compiled with support for autocommands.
+if has("autocmd")
+	" Use filetype detection and file-based automatic indenting.
+	filetype plugin indent on
+	" Use actual tab chars in Makefiles.
+	autocmd FileType make set tabstop=8 shiftwidth=8 softtabstop=0 noexpandtab
+endif
