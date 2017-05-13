@@ -40,7 +40,9 @@ map <C-l> <C-w>l
 set tabstop=4 		" show existing tab with 4 spaces width
 set shiftwidth=4 	" when indenting with '>', use 4 spaces width
 set expandtab 		" On pressing tab, insert 4 spaces
-set softtabstop=4   	" Sets the number of columns for a TAB."
+set softtabstop=4   " Sets the number of columns for a TAB."
+set cursorline      " Show visual line under the curson.
+set showmatch       " show the matching part of the pair [], {}, ()
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
 	" Use filetype detection and file-based automatic indenting.
