@@ -3,6 +3,7 @@ execute pathogen#infect()
 call pathogen#helptags()
 syntax on
 filetype plugin indent on
+filetype indent on      " load filetype-specific indent files"
 
 " https://gist.github.com/rocarvaj/2513367
 " disable vi compatibility (emulation of old bugs)
@@ -42,7 +43,6 @@ set shiftwidth=4 	" when indenting with '>', use 4 spaces width
 set expandtab 		" On pressing tab, insert 4 spaces
 set softtabstop=4   " Sets the number of columns for a TAB."
 set cursorline      " Show visual line under the curson.
-set showmatch       " show the matching part of the pair [], {}, ()
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
 	" Use filetype detection and file-based automatic indenting.
@@ -50,3 +50,12 @@ if has("autocmd")
 	" Use actual tab chars in Makefiles.
 	autocmd FileType make set tabstop=8 shiftwidth=8 softtabstop=0 noexpandtab
 endif
+
+" https://dougblack.io/words/a-good-vimrc.html
+set incsearch           " search as characters are entered
+set hlsearch            " highlight matches
+" turn off search highlight
+nnoremap <leader><space> :nohlsearch<CR>
+
+
+
