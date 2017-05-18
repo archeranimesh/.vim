@@ -56,7 +56,32 @@ endif
 " https://dougblack.io/words/a-good-vimrc.html
 set incsearch           " search as characters are entered
 set hlsearch            " highlight matches
+set ignorecase          " Ignore case when searching
 " turn off search highlight
 nnoremap <leader><space> :nohlsearch<CR>
 " https://github.com/easymotion/vim-easymotion
 map <Leader> <Plug>(easymotion-prefix)
+
+" No annoying sound on errors
+" https://github.com/amix/vimrc/blob/master/vimrcs/basic.vim
+set noerrorbells
+set novisualbell
+set t_vb=
+set tm=500
+
+" Add a bit extra margin to the left
+set foldcolumn=1
+" Use Unix as the standard file type
+set ffs=unix,dos,mac
+
+" Turn backup off, since most stuff is in SVN, git et.c anyway...
+set nobackup
+set nowb
+set noswapfile
+
+" Move a line of text using ALT+[jk] or Command+[jk] on mac
+nmap <M-j> mz:m+<cr>`z
+nmap <M-k> mz:m-2<cr>`z
+vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
+vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
+
