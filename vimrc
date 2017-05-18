@@ -58,8 +58,5 @@ set incsearch           " search as characters are entered
 set hlsearch            " highlight matches
 " turn off search highlight
 nnoremap <leader><space> :nohlsearch<CR>
-" Markdown
-
-
-
-
+" https://github.com/easymotion/vim-easymotion
+map <Leader> <Plug>(easymotion-prefix)
