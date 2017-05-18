@@ -49,6 +49,8 @@ if has("autocmd")
 	filetype plugin indent on
 	" Use actual tab chars in Makefiles.
 	autocmd FileType make set tabstop=8 shiftwidth=8 softtabstop=0 noexpandtab
+    " Markdown
+    autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 endif
 
 " https://dougblack.io/words/a-good-vimrc.html
@@ -56,6 +58,8 @@ set incsearch           " search as characters are entered
 set hlsearch            " highlight matches
 " turn off search highlight
 nnoremap <leader><space> :nohlsearch<CR>
+" Markdown
+
 
 
 
