@@ -85,3 +85,6 @@ nmap <M-k> mz:m-2<cr>`z
 vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
 vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
 
+
+nmap <c-s> :w<CR>
+imap <c-s> <Esc>:w<CR>a
