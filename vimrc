@@ -88,3 +88,9 @@ vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
 
 nmap <c-s> :w<CR>
 imap <c-s> <Esc>:w<CR>a
+
+" Set color
+" https://github.com/jnurmine/Zenburn
+set t_Co=256
+colors zenburn
+
