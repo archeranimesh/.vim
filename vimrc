@@ -112,3 +112,15 @@ let g:pymode_rope_complete_on_dot = 0
 " Ctrl + j will trigger snipmate.
 imap <C-J> <Plug>snipMateNextOrTrigger
 smap <C-J> <Plug>snipMateNextOrTrigger
+" http://christian.sterzl.info/blog/vim-as-ide-for-python 
+" Goto definition with F3
+map <F3> :YcmCompleter GoTo<CR>
+
+" https://www.youtube.com/watch?v=YhqsjUUHj6g
+" http://vim.wikia.com/wiki/Accessing_the_system_clipboard
+set clipboard=unnamed
+set clipboard=unnamedplus       "This works.
+" BackSpace works.
+set bs=2
+" http://vim.wikia.com/wiki/Toggle_auto-indenting_for_code_paste
+
