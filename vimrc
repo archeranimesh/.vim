@@ -23,6 +23,9 @@ map <C-n> :NERDTreeToggle<CR>
 "http://stackoverflow.com/questions/2066590/automatically-quit-vim-if-nerdtree-is-last-and-only-buffer
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
+" http://stackoverflow.com/questions/1979520/auto-open-nerdtree-in-every-tab
+autocmd BufWinEnter * NERDTreeMirror
+
 
 "cursor always starts in the NERDTree window
 "http://stackoverflow.com/questions/1447334/how-do-you-add-nerdtree-to-your-vimrc
@@ -99,5 +102,7 @@ colors zenburn
 
 " https://realpython.com/blog/python/vim-and-python-a-match-made-in-heaven/
 let g:ycm_autoclose_preview_window_after_completion=1
+" Chose the python executable based on the virtualenv.
+let g:ycm_python_binary_path = 'python'
 map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
