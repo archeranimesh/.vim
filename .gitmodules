@@ -31,3 +31,6 @@
 [submodule "bundle/YouCompleteMe"]
 	path = bundle/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule "bundle/python-mode"]
+	path = bundle/python-mode
+	url = https://github.com/python-mode/python-mode.git

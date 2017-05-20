@@ -105,4 +105,5 @@ let g:ycm_autoclose_preview_window_after_completion=1
 " Chose the python executable based on the virtualenv.
 let g:ycm_python_binary_path = 'python'
 map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
-
+" http://stackoverflow.com/questions/21743323/youcompleteme-freezes-when-used-with-python-mode
+let g:pymode_rope_complete_on_dot = 0
