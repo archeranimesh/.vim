@@ -57,6 +57,14 @@ endif
 set incsearch           " search as characters are entered
 set hlsearch            " highlight matches
 set ignorecase          " Ignore case when searching
+set number              " show line numbers"
+set showcmd             " show command in bottom bar"
+set wildmenu            " visual autocomplete for command menu"
+set lazyredraw          " redraw only when we need to."
+" move vertically by visual line
+nnoremap j gj
+nnoremap k gk
+
 " turn off search highlight
 nnoremap <leader><space> :nohlsearch<CR>
 " https://github.com/easymotion/vim-easymotion
@@ -79,13 +87,8 @@ set nobackup
 set nowb
 set noswapfile
 
-" Move a line of text using ALT+[jk] or Command+[jk] on mac
-nmap <M-j> mz:m+<cr>`z
-nmap <M-k> mz:m-2<cr>`z
-vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
-vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
 
-
+" Ctrl+s to save a File, additonally one more change in bashrc
 nmap <c-s> :w<CR>
 imap <c-s> <Esc>:w<CR>a
 
@@ -93,4 +96,8 @@ imap <c-s> <Esc>:w<CR>a
 " https://github.com/jnurmine/Zenburn
 set t_Co=256
 colors zenburn
+
+" https://realpython.com/blog/python/vim-and-python-a-match-made-in-heaven/
+let g:ycm_autoclose_preview_window_after_completion=1
+map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
