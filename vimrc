@@ -107,3 +107,8 @@ let g:ycm_python_binary_path = 'python'
 map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 " http://stackoverflow.com/questions/21743323/youcompleteme-freezes-when-used-with-python-mode
 let g:pymode_rope_complete_on_dot = 0
+" Tab was not working in snipmate, youcompleteme
+"http://stackoverflow.com/questions/15572395/change-the-default-tab-in-snipmate
+" Ctrl + j will trigger snipmate.
+imap <C-J> <Plug>snipMateNextOrTrigger
+smap <C-J> <Plug>snipMateNextOrTrigger
