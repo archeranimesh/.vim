@@ -38,6 +38,19 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 " End of nerdTree Configuration
+" Stop Key movement with arrow key
+"http://stackoverflow.com/questions/5367760/vim-disabling-the-cursor-arrow-keys-but-only-for-navigation
+" Disable Arrow keys in Escape mode
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+
+" Disable Arrow keys in Insert mode
+imap <up> <nop>
+imap <down> <nop>
+imap <left> <nop>
+imap <right> <nop>
 
 " Tab Settings
 " http://stackoverflow.com/questions/234564/tab-key-4-spaces-and-auto-indent-after-curly-braces-in-vim
@@ -106,6 +119,7 @@ let g:ycm_autoclose_preview_window_after_completion=1
 let g:ycm_python_binary_path = 'python'
 map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 " http://stackoverflow.com/questions/21743323/youcompleteme-freezes-when-used-with-python-mode
+let g:pymode = 0    " Disable Pymode
 let g:pymode_rope_complete_on_dot = 0
 " Tab was not working in snipmate, youcompleteme
 "http://stackoverflow.com/questions/15572395/change-the-default-tab-in-snipmate
