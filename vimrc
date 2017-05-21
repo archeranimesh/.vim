@@ -124,3 +124,10 @@ set clipboard=unnamedplus       "This works.
 set bs=2
 " http://vim.wikia.com/wiki/Toggle_auto-indenting_for_code_paste
 
+" https://vi.stackexchange.com/questions/2674/how-can-i-easily-move-a-line
+nnoremap <A-j> :m .+1<CR>==
+nnoremap <A-k> :m .-2<CR>==
+inoremap <A-j> <Esc>:m .+1<CR>==gi
+inoremap <A-k> <Esc>:m .-2<CR>==gi
+vnoremap <A-j> :m '>+1<CR>gv=gv
+vnoremap <A-k> :m '<-2<CR>gv=gv
